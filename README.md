@@ -14,7 +14,7 @@ A full-stack, real-time stock trading platform supporting **50+ concurrent users
 
 ## 📸 Screenshots
 
-> _(Add screenshots of your dashboard, portfolio view, and trade execution screen here)_
+
 
 ---
 
