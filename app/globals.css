@@ -154,3 +154,82 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* =====================
+   Trading Platform Styles
+   ===================== */
+
+/* Ticker animation */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-ticker {
+  animation: ticker 60s linear infinite;
+  width: max-content;
+}
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Dark grid background */
+.trading-bg {
+  background-color: #060b18;
+  background-image:
+    linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Glass panel */
+.glass-panel {
+  background: rgba(13, 21, 38, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Slide in animation */
+@keyframes slide-in-from-top {
+  from { transform: translateY(-8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.animate-in {
+  animation: slide-in-from-top 0.3s ease-out both;
+}
+.slide-in-from-top-2 {
+  animation-name: slide-in-from-top;
+}
+
+/* Number flash on price change */
+@keyframes flash-green {
+  0% { color: #10b981; }
+  100% { color: inherit; }
+}
+@keyframes flash-red {
+  0% { color: #ef4444; }
+  100% { color: inherit; }
+}
+.price-up { animation: flash-green 0.5s ease-out; }
+.price-down { animation: flash-red 0.5s ease-out; }
+
+/* Table hover */
+.hover\:bg-white\/3:hover {
+  background-color: rgba(255,255,255,0.03);
+}
+
